@@ -376,13 +376,6 @@
     $$("[data-open]").forEach((b) =>
       b.addEventListener("click", () => open(b.dataset.open)),
     );
-    $$(".card.app").forEach((c) =>
-      c.addEventListener("click", (e) => {
-        if (e.target.closest("a, button")) return;
-        const b = $("[data-open]", c);
-        if (b) b.click();
-      }),
-    );
     $$("[data-close]", dlg).forEach((b) => b.addEventListener("click", close));
     dlg.addEventListener("click", (e) => {
       if (e.target === dlg) close();
