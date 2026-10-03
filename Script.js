@@ -143,67 +143,256 @@
       });
     });
 
-  /* Project details modal (only facts taken from the site content) */
-  const data = {
+  /* Project data — fill in links and image paths here. An empty link hides its button; an empty images list shows a placeholder. */
+  const PROJECTS = {
     taskmind: {
-      t: "TaskMind",
-      k: "AI Productivity App",
-      o: "AI-powered productivity app for goals, tasks and daily planning.",
-      f: [
+      title: "TaskMind",
+      category: "Mobile · AI Productivity App",
+      overview:
+        "AI-powered productivity app for goals, tasks and daily planning.",
+      features: [
         "Goals",
         "Tasks",
         "Daily planning",
-        "AI-powered assistance",
+        "AI-powered",
         "Local data storage with AsyncStorage",
       ],
-      s: ["React Native", "Expo", "TypeScript", "AI", "AsyncStorage"],
+      stack: ["React Native", "Expo", "TypeScript", "AI", "AsyncStorage"],
+      images: [],
+      links: { playStore: "", github: "", demo: "" },
     },
     ajir: {
-      t: "Ajir",
-      k: "Islamic Mobile Application",
-      o: "Islamic prayer app with location-based prayer times, adhkar, Quran pages, tracking and notifications.",
-      f: [
+      title: "Ajir",
+      category: "Mobile · Islamic Application",
+      overview:
+        "Islamic prayer app with location-based prayer times, adhkar, Quran pages, tracking and notifications.",
+      features: [
         "Location-based prayer times",
         "Adhkar",
         "Quran pages",
         "Tracking",
         "Notifications",
       ],
-      s: ["React Native", "Expo", "TypeScript", "Firebase", "Adhan"],
+      stack: ["React Native", "Expo", "TypeScript", "Firebase", "Adhan"],
+      images: [],
+      links: { playStore: "", github: "", demo: "" },
+    },
+    portfolio: {
+      title: "Portfolio website",
+      category: "Web project",
+      overview: "A personal portfolio website.",
+      features: [],
+      stack: [],
+      images: [
+        "images/Rectangle 11.png",
+        "images/Rectangle 12.png",
+        "images/portfolio2.png",
+        "images/light.png",
+        "images/dark.png",
+      ],
+      links: { playStore: "", github: "", demo: "" },
+    },
+    shoe: {
+      title: "Shoe website",
+      category: "Web project",
+      overview: "A shoe store website.",
+      features: [],
+      stack: [],
+      images: ["images/Rectangle 13.png", "images/nike.png"],
+      links: { playStore: "", github: "", demo: "" },
+    },
+    weather: {
+      title: "Weather website",
+      category: "Web project",
+      overview: "A weather website.",
+      features: [],
+      stack: [],
+      images: ["images/weather.png"],
+      links: { playStore: "", github: "", demo: "" },
+    },
+    arabs: {
+      title: "Arabs website",
+      category: "Web project",
+      overview: "A website for Arabs.",
+      features: [],
+      stack: [],
+      images: ["images/arab.png", "images/arab2.png"],
+      links: { playStore: "", github: "", demo: "" },
+    },
+    shop: {
+      title: "Shop website",
+      category: "Web project",
+      overview: "An online shop website.",
+      features: [],
+      stack: [],
+      images: ["images/fitnest.png"],
+      links: { playStore: "", github: "", demo: "" },
+    },
+    password: {
+      title: "Password generator",
+      category: "Web project",
+      overview: "A password generator web tool.",
+      features: [],
+      stack: [],
+      images: ["images/pasword.png"],
+      links: { playStore: "", github: "", demo: "" },
     },
   };
+  const LINKS = [
+    ["playStore", "Google Play"],
+    ["github", "GitHub"],
+    ["demo", "Live Demo"],
+  ];
+
+  /* Featured TaskMind preview: uses the first screenshot once one is added */
+  const pv = $(".preview"),
+    first = PROJECTS.taskmind.images[0];
+  if (pv && first) {
+    const im = document.createElement("img");
+    im.src = first;
+    im.alt = "TaskMind screenshot";
+    pv.replaceChildren(im);
+    pv.removeAttribute("aria-hidden");
+  }
+
+  /* Project details modal, built from PROJECTS */
+  const el = (tag, cls, txt) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (txt != null) n.textContent = txt;
+    return n;
+  };
+  const block = (label, node) => {
+    const d = el("div");
+    d.append(el("h4", null, label), node);
+    return d;
+  };
+  const list = (items, cls) => {
+    const u = el("ul", cls);
+    items.forEach((t) => u.append(el("li", null, t)));
+    return u;
+  };
+  const placeholder = (msg) => {
+    const d = el("div", "ph");
+    d.append(
+      el("strong", null, "Screenshot placeholder"),
+      el("span", null, msg),
+    );
+    return d;
+  };
+
   const dlg = $("#modal");
   if (dlg) {
+    let proj = null,
+      shots = [],
+      thumbs = [],
+      stage = null,
+      cur = 0;
     const lock = (on) => {
       document.documentElement.style.overflow = on ? "hidden" : "";
     };
-    const li = (a) => a.map((x) => `<li>${x}</li>`).join("");
-    $$("[data-open]").forEach((b) =>
-      b.addEventListener("click", () => {
-        const p = data[b.dataset.open];
-        if (!p) return;
-        $("#mTitle").textContent = p.t;
-        $("#mBody").innerHTML =
-          `<div><h4>OVERVIEW</h4><p>${p.o}</p></div>` +
-          `<div><h4>KEY FEATURES</h4><ul class="fe">${li(p.f)}</ul></div>` +
-          `<div><h4>TECHNOLOGY</h4><ul class="pills">${li(p.s)}</ul></div>`;
-        typeof dlg.showModal === "function"
-          ? dlg.showModal()
-          : dlg.setAttribute("open", "");
-        lock(true);
-      }),
-    );
+    const show = (i) => {
+      if (!shots.length || !stage) return;
+      cur = (i + shots.length) % shots.length;
+      const im = el("img");
+      im.src = shots[cur];
+      im.alt = `${proj.title} screenshot ${cur + 1} of ${shots.length}`;
+      im.addEventListener("error", () =>
+        stage.replaceChildren(placeholder("Image not found: " + shots[cur])),
+      );
+      stage.replaceChildren(im);
+      thumbs.forEach((t, k) =>
+        t.setAttribute("aria-current", String(k === cur)),
+      );
+    };
+    const open = (id) => {
+      proj = PROJECTS[id];
+      if (!proj) return;
+      const body = $("#mBody");
+      if (!body) return;
+      $("#mTitle").textContent = proj.title;
+      $("#mCat").textContent = proj.category;
+      body.replaceChildren();
+      shots = proj.images;
+      thumbs = [];
+      cur = 0;
+      stage = el("div", "stage");
+      const gal = el("div", "gal");
+      gal.append(stage);
+      if (shots.length > 1) {
+        const tr = el("div", "thumbs");
+        shots.forEach((src, k) => {
+          const b = el("button", "th"),
+            im = el("img");
+          b.type = "button";
+          b.setAttribute("aria-label", `Show screenshot ${k + 1}`);
+          im.src = src;
+          im.alt = "";
+          im.loading = "lazy";
+          b.append(im);
+          b.addEventListener("click", () => show(k));
+          thumbs.push(b);
+          tr.append(b);
+        });
+        gal.append(tr);
+      }
+      body.append(gal);
+      shots.length
+        ? show(0)
+        : stage.append(
+            placeholder(
+              `Add screenshots, e.g. images/${id}-1.png, and list them in script.js`,
+            ),
+          );
+      body.append(block("OVERVIEW", el("p", null, proj.overview)));
+      if (proj.features.length)
+        body.append(block("KEY FEATURES", list(proj.features, "fe")));
+      if (proj.stack.length)
+        body.append(block("TECHNOLOGY", list(proj.stack, "pills")));
+      const row = el("div", "row");
+      LINKS.forEach(([key, label]) => {
+        if (!proj.links[key]) return;
+        const a = el("a", "btn");
+        a.href = proj.links[key];
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.append(label + " ", el("span", "arr", "↗"));
+        row.append(a);
+      });
+      if (row.children.length) body.append(row);
+      body.scrollTop = 0;
+      dlg.scrollTop = 0;
+      typeof dlg.showModal === "function"
+        ? dlg.showModal()
+        : dlg.setAttribute("open", "");
+      lock(true);
+    };
     const close = () => {
       typeof dlg.close === "function"
         ? dlg.close()
         : dlg.removeAttribute("open");
       lock(false);
     };
+    $$("[data-open]").forEach((b) =>
+      b.addEventListener("click", () => open(b.dataset.open)),
+    );
+    $$(".card.app").forEach((c) =>
+      c.addEventListener("click", (e) => {
+        if (e.target.closest("a, button")) return;
+        const b = $("[data-open]", c);
+        if (b) b.click();
+      }),
+    );
     $$("[data-close]", dlg).forEach((b) => b.addEventListener("click", close));
     dlg.addEventListener("click", (e) => {
       if (e.target === dlg) close();
     });
     dlg.addEventListener("close", () => lock(false));
+    dlg.addEventListener("keydown", (e) => {
+      if (shots.length < 2) return;
+      if (e.key === "ArrowRight") show(cur + 1);
+      if (e.key === "ArrowLeft") show(cur - 1);
+    });
   }
 
   /* Contact form → opens the visitor's email app */

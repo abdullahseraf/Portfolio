@@ -945,7 +945,7 @@ footer li {
 
 /* modal */
 dialog {
-  width: min(680px, calc(100% - 32px));
+  width: min(860px, calc(100% - 32px));
   max-height: min(86vh, 720px);
   padding: 0;
   color: var(--text);
@@ -1050,4 +1050,122 @@ dialog[open] {
     opacity: 1;
     translate: none;
   }
+}
+
+/* project buttons + modal gallery */
+button.shot {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+.shot .cap {
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  right: 56px;
+  bottom: 16px;
+  font: 700 24px var(--display);
+  letter-spacing: 0.5px;
+  color: var(--ice);
+}
+.preview img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mh .kind {
+  margin-top: 6px;
+  font: 500 13px var(--ui);
+  color: var(--steel-hi);
+}
+.gal {
+  display: grid;
+  gap: 10px;
+}
+.stage {
+  aspect-ratio: 16/10;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--line2);
+  border-radius: 10px;
+}
+.stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ph {
+  display: grid;
+  gap: 6px;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+.ph strong {
+  font: 600 14px var(--ui);
+  color: var(--text);
+}
+.thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+.th {
+  flex: none;
+  width: 96px;
+  aspect-ratio: 16/10;
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--line2);
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition:
+    opacity 0.3s,
+    border-color 0.3s;
+}
+.th[aria-current="true"],
+.th:hover {
+  opacity: 1;
+  border-color: var(--steel-hi);
+}
+.th img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mb .row {
+  margin-top: 0;
+}
+@media (max-width: 480px) {
+  .mh,
+  .mb {
+    padding-inline: 18px;
+  }
+  .mh h3 {
+    font-size: 36px;
+  }
+  .th {
+    width: 76px;
+  }
+}
+
+/* web project info cards: push the button to the bottom; whole card opens details */
+.app > p + .row {
+  margin-top: auto;
+}
+.card.app {
+  cursor: pointer;
 }
