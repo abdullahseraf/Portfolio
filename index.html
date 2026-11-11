@@ -159,15 +159,20 @@
           </div>
 
           <article class="feat rv">
-            <div class="preview" aria-hidden="true">
-              <b>TaskMind</b><span>React Native · Expo · TypeScript</span>
+            <div class="preview is-mobile-feat" aria-hidden="true">
+              <div class="mockup-frame">
+                <img src="images/Taskmind.jpg" alt="TaskMind App screenshot" />
+              </div>
             </div>
             <div class="fbody">
-              <span class="badge">FEATURED PROJECT</span>
+              <div class="feat-top">
+                <span class="badge feat-badge">FEATURED PROJECT</span>
+                <span class="badge badge-mobile">Mobile App</span>
+              </div>
               <h3>TaskMind</h3>
               <p class="kind">AI Productivity App</p>
               <p>
-                AI-powered productivity app for goals, tasks and daily planning.
+                AI-powered productivity app for goals, tasks and daily planning with smart suggestions.
               </p>
               <ul class="pills">
                 <li>React Native</li>
@@ -178,7 +183,7 @@
               </ul>
               <div class="row">
                 <button class="btn solid" type="button" data-open="taskmind">
-                  View Project <span class="arr">↗</span>
+                  View Project Details <span class="arr">↗</span>
                 </button>
               </div>
             </div>
@@ -193,119 +198,221 @@
           </div>
           <div class="grid">
             <article class="card app rv" data-t="mobile">
-              <span class="badge">Mobile</span>
-              <h3>Ajir</h3>
-              <p class="kind">Islamic Mobile Application</p>
-              <p>
-                Location-based prayer times, adhkar, Quran and notifications.
-              </p>
-              <ul class="pills">
-                <li>React Native</li>
-                <li>Expo</li>
-                <li>TypeScript</li>
-                <li>Firebase</li>
-                <li>Adhan</li>
-              </ul>
-              <div class="row">
-                <button class="btn sm" type="button" data-open="ajir">
-                  Details <span class="arr">↗</span>
-                </button>
+              <div class="card-thumb mobile-thumb">
+                <img src="images/Ajir.jpg" alt="Ajir Islamic Mobile App" loading="lazy" />
+                <span class="thumb-badge"><i class="dot live"></i> Google Play</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="badge badge-mobile">Mobile App</span>
+                </div>
+                <h3>Ajir</h3>
+                <p class="kind">Islamic Prayer &amp; Quran App</p>
+                <p>
+                  Location-based prayer times, adhkar, Quran pages, tracking and notifications.
+                </p>
+                <ul class="pills">
+                  <li>React Native</li>
+                  <li>Expo</li>
+                  <li>TypeScript</li>
+                  <li>Firebase</li>
+                  <li>Adhan</li>
+                </ul>
+                <div class="row">
+                  <a
+                    class="btn sm solid store-btn"
+                    href="https://play.google.com/store/apps/details?id=com.anonymous.ajir&amp;pli=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Download Ajir from Google Play Store"
+                  >
+                    <svg class="play-icon" viewBox="0 0 512 512" width="14" height="14" fill="currentColor" aria-hidden="true">
+                      <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
+                    </svg>
+                    Google Play <span class="arr">↗</span>
+                  </a>
+                  <button class="btn sm" type="button" data-open="ajir">
+                    Details <span class="arr">↗</span>
+                  </button>
+                </div>
               </div>
             </article>
+
             <article class="card app rv" data-t="web">
-              <span class="badge">Web</span>
-              <h3>Portfolio website</h3>
-              <p class="kind">Web project</p>
-              <p>A personal portfolio website.</p>
-              <div class="row">
-                <button
-                  class="btn sm"
-                  type="button"
-                  data-open="portfolio"
-                  aria-haspopup="dialog"
-                >
-                  View screenshots <span class="arr">↗</span>
-                </button>
+              <div class="card-thumb">
+                <img src="images/nike.png" alt="Nike Shoe Store screenshot" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="badge badge-web">Web Project</span>
+                </div>
+                <h3>Nike Store</h3>
+                <p class="kind">E-Commerce Web Concept</p>
+                <p>Modern shoe store landing page with bold typography and product showcase.</p>
+                <ul class="pills">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                  <li>UI/UX</li>
+                </ul>
+                <div class="row">
+                  <button
+                    class="btn sm"
+                    type="button"
+                    data-open="shoe"
+                    aria-haspopup="dialog"
+                  >
+                    View details <span class="arr">↗</span>
+                  </button>
+                </div>
               </div>
             </article>
+
             <article class="card app rv" data-t="web">
-              <span class="badge">Web</span>
-              <h3>Shoe website</h3>
-              <p class="kind">Web project</p>
-              <p>A shoe store website.</p>
-              <div class="row">
-                <button
-                  class="btn sm"
-                  type="button"
-                  data-open="shoe"
-                  aria-haspopup="dialog"
-                >
-                  View screenshots <span class="arr">↗</span>
-                </button>
+              <div class="card-thumb">
+                <img src="images/weather.png" alt="Weather Website screenshot" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="badge badge-web">Web Project</span>
+                </div>
+                <h3>Weather App</h3>
+                <p class="kind">Live Weather Application</p>
+                <p>Clean weather forecast dashboard with real-time conditions and city search.</p>
+                <ul class="pills">
+                  <li>JavaScript</li>
+                  <li>Weather API</li>
+                  <li>CSS3</li>
+                  <li>HTML5</li>
+                </ul>
+                <div class="row">
+                  <button
+                    class="btn sm"
+                    type="button"
+                    data-open="weather"
+                    aria-haspopup="dialog"
+                  >
+                    View details <span class="arr">↗</span>
+                  </button>
+                </div>
               </div>
             </article>
+
             <article class="card app rv" data-t="web">
-              <span class="badge">Web</span>
-              <h3>Weather website</h3>
-              <p class="kind">Web project</p>
-              <p>A weather website.</p>
-              <div class="row">
-                <button
-                  class="btn sm"
-                  type="button"
-                  data-open="weather"
-                  aria-haspopup="dialog"
-                >
-                  View screenshots <span class="arr">↗</span>
-                </button>
+              <div class="card-thumb">
+                <img src="images/arab.png" alt="Arab Heritage website screenshot" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="badge badge-web">Web Project</span>
+                </div>
+                <h3>Arab Heritage</h3>
+                <p class="kind">Cultural Web Portal</p>
+                <p>Educational and cultural portal celebrating Arab history, literature and civilization.</p>
+                <ul class="pills">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                </ul>
+                <div class="row">
+                  <button
+                    class="btn sm"
+                    type="button"
+                    data-open="arabs"
+                    aria-haspopup="dialog"
+                  >
+                    View details <span class="arr">↗</span>
+                  </button>
+                </div>
               </div>
             </article>
+
             <article class="card app rv" data-t="web">
-              <span class="badge">Web</span>
-              <h3>Arabs website</h3>
-              <p class="kind">Web project</p>
-              <p>A website for Arabs.</p>
-              <div class="row">
-                <button
-                  class="btn sm"
-                  type="button"
-                  data-open="arabs"
-                  aria-haspopup="dialog"
-                >
-                  View screenshots <span class="arr">↗</span>
-                </button>
+              <div class="card-thumb">
+                <img src="images/fitnest.png" alt="FitNest Shop website screenshot" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="badge badge-web">Web Project</span>
+                </div>
+                <h3>FitNest Store</h3>
+                <p class="kind">Fitness E-Commerce Platform</p>
+                <p>Online fitness and lifestyle shop with interactive product collections.</p>
+                <ul class="pills">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                  <li>Responsive</li>
+                </ul>
+                <div class="row">
+                  <button
+                    class="btn sm"
+                    type="button"
+                    data-open="shop"
+                    aria-haspopup="dialog"
+                  >
+                    View details <span class="arr">↗</span>
+                  </button>
+                </div>
               </div>
             </article>
+
             <article class="card app rv" data-t="web">
-              <span class="badge">Web</span>
-              <h3>Shop website</h3>
-              <p class="kind">Web project</p>
-              <p>An online shop website.</p>
-              <div class="row">
-                <button
-                  class="btn sm"
-                  type="button"
-                  data-open="shop"
-                  aria-haspopup="dialog"
-                >
-                  View screenshots <span class="arr">↗</span>
-                </button>
+              <div class="card-thumb">
+                <img src="images/pasword.png" alt="Password Generator screenshot" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="badge badge-web">Web Project</span>
+                </div>
+                <h3>Password Generator</h3>
+                <p class="kind">Security Web Tool</p>
+                <p>Customizable strong password generation tool with instant clipboard copy.</p>
+                <ul class="pills">
+                  <li>JavaScript</li>
+                  <li>Web Crypto</li>
+                  <li>CSS3</li>
+                </ul>
+                <div class="row">
+                  <button
+                    class="btn sm"
+                    type="button"
+                    data-open="password"
+                    aria-haspopup="dialog"
+                  >
+                    View details <span class="arr">↗</span>
+                  </button>
+                </div>
               </div>
             </article>
+
             <article class="card app rv" data-t="web">
-              <span class="badge">Web</span>
-              <h3>Password generator</h3>
-              <p class="kind">Web project</p>
-              <p>A password generator web tool.</p>
-              <div class="row">
-                <button
-                  class="btn sm"
-                  type="button"
-                  data-open="password"
-                  aria-haspopup="dialog"
-                >
-                  View screenshots <span class="arr">↗</span>
-                </button>
+              <div class="card-thumb">
+                <img src="images/portfolio2.png" alt="Portfolio Website screenshot" loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="badge badge-web">Web Project</span>
+                </div>
+                <h3>Portfolio Website</h3>
+                <p class="kind">Personal Developer Showcase</p>
+                <p>Modern responsive developer portfolio with dark theme and animations.</p>
+                <ul class="pills">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                  <li>GitHub Pages</li>
+                </ul>
+                <div class="row">
+                  <button
+                    class="btn sm"
+                    type="button"
+                    data-open="portfolio"
+                    aria-haspopup="dialog"
+                  >
+                    View details <span class="arr">↗</span>
+                  </button>
+                </div>
               </div>
             </article>
           </div>

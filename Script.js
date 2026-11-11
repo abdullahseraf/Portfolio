@@ -143,99 +143,139 @@
       });
     });
 
-  /* Project data — fill in links and image paths here. An empty link hides its button; an empty images list shows a placeholder. */
+    /* Project data — fill in links and image paths here. An empty link hides its button; an empty images list shows a placeholder. */
   const PROJECTS = {
     taskmind: {
       title: "TaskMind",
       category: "Mobile · AI Productivity App",
       overview:
-        "AI-powered productivity app for goals, tasks and daily planning.",
+        "AI-powered productivity and daily planning application designed for seamless goal tracking, smart breakdown of tasks and habit formation.",
       features: [
-        "Goals",
-        "Tasks",
-        "Daily planning",
-        "AI-powered",
-        "Local data storage with AsyncStorage",
+        "Smart Goal Breakdown powered by AI",
+        "Interactive Daily Task Organizer & Prioritization",
+        "Personalized Focus & Daily Routine Planning",
+        "Offline-first local data persistence with AsyncStorage",
+        "Clean, modern distraction-free dark interface",
       ],
-      stack: ["React Native", "Expo", "TypeScript", "AI", "AsyncStorage"],
-      images: [],
-      links: { playStore: "", github: "", demo: "" },
+      stack: ["React Native", "Expo", "TypeScript", "AI Integration", "AsyncStorage"],
+      images: ["images/Taskmind.jpg"],
+      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
     },
     ajir: {
       title: "Ajir",
       category: "Mobile · Islamic Application",
       overview:
-        "Islamic prayer app with location-based prayer times, adhkar, Quran pages, tracking and notifications.",
+        "Comprehensive Islamic prayer companion app featuring automated location-based prayer times, morning & evening adhkar, Quran reader, daily tracking and custom notifications.",
       features: [
-        "Location-based prayer times",
-        "Adhkar",
-        "Quran pages",
-        "Tracking",
-        "Notifications",
+        "Location-based accurate prayer times & Qibla compass",
+        "Complete morning, evening & daily Adhkar with digital counter",
+        "Full high-definition Quran pages with bookmarking",
+        "Daily prayer tracker and spiritual streak monitoring",
+        "Customizable Adhan prayer push notifications",
       ],
-      stack: ["React Native", "Expo", "TypeScript", "Firebase", "Adhan"],
-      images: [],
-      links: { playStore: "", github: "", demo: "" },
+      stack: ["React Native", "Expo", "TypeScript", "Firebase", "Adhan API"],
+      images: ["images/Ajir.jpg"],
+      links: {
+        playStore: "https://play.google.com/store/apps/details?id=com.anonymous.ajir&pli=1",
+        github: "https://github.com/abdullahseraf",
+        demo: "",
+      },
     },
     portfolio: {
-      title: "Portfolio website",
-      category: "Web project",
-      overview: "A personal portfolio website.",
-      features: [],
-      stack: [],
+      title: "Portfolio Website",
+      category: "Web · Personal Showcase",
+      overview:
+        "Personal developer portfolio built with modern responsive CSS, semantic HTML5, interactive JavaScript and CI/CD automated deployment with GitHub Pages.",
+      features: [
+        "Fully responsive layout across mobile, tablet and desktop",
+        "Interactive project gallery and detail dialogs",
+        "Category filtering with smooth CSS transitions",
+        "Scroll progress indicator and IntersectionObserver reveal animations",
+      ],
+      stack: ["HTML5", "CSS3", "JavaScript", "GitHub Actions"],
       images: [
+        "images/portfolio2.png",
+        "images/dark.png",
+        "images/light.png",
         "images/Rectangle 11.png",
         "images/Rectangle 12.png",
-        "images/portfolio2.png",
-        "images/light.png",
-        "images/dark.png",
       ],
-      links: { playStore: "", github: "", demo: "" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "https://abdullahseraf.github.io" },
     },
     shoe: {
-      title: "Shoe website",
-      category: "Web project",
-      overview: "A shoe store website.",
-      features: [],
-      stack: [],
-      images: ["images/Rectangle 13.png", "images/nike.png"],
-      links: { playStore: "", github: "", demo: "" },
+      title: "Nike Shoe Store",
+      category: "Web · E-Commerce Concept",
+      overview:
+        "Modern athletic footwear e-commerce concept store highlighting high-impact product imagery, clean typography, and interactive shopping interactions.",
+      features: [
+        "Dynamic hero banner and product showcases",
+        "Interactive product card variations and hover states",
+        "Mobile-first responsive e-commerce layout",
+        "High-contrast dark modern aesthetic",
+      ],
+      stack: ["HTML5", "CSS3", "JavaScript", "UI/UX"],
+      images: ["images/nike.png", "images/Rectangle 13.png"],
+      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
     },
     weather: {
-      title: "Weather website",
-      category: "Web project",
-      overview: "A weather website.",
-      features: [],
-      stack: [],
+      title: "Weather Forecast",
+      category: "Web · Weather Application",
+      overview:
+        "Clean, interactive weather forecast web application providing real-time meteorological conditions, temperature, humidity and global city search.",
+      features: [
+        "Instant city search with meteorological data integration",
+        "Real-time temperature, wind speed and atmospheric conditions",
+        "Minimalist aesthetic with responsive card layout",
+        "Dynamic condition badges and weather indicators",
+      ],
+      stack: ["JavaScript", "REST Weather API", "CSS3", "HTML5"],
       images: ["images/weather.png"],
-      links: { playStore: "", github: "", demo: "" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
     },
     arabs: {
-      title: "Arabs website",
-      category: "Web project",
-      overview: "A website for Arabs.",
-      features: [],
-      stack: [],
+      title: "Arab Heritage",
+      category: "Web · Cultural Portal",
+      overview:
+        "An educational and cultural web platform exploring the rich history, literature, architecture and civilization of the Arab world.",
+      features: [
+        "Structured historical eras and cultural spotlights",
+        "Bilingual typography and high-definition visual assets",
+        "Smooth scroll navigation and reading-optimized typography",
+        "Interactive cultural timeline cards",
+      ],
+      stack: ["HTML5", "CSS3", "JavaScript"],
       images: ["images/arab.png", "images/arab2.png"],
-      links: { playStore: "", github: "", demo: "" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
     },
     shop: {
-      title: "Shop website",
-      category: "Web project",
-      overview: "An online shop website.",
-      features: [],
-      stack: [],
+      title: "FitNest Store",
+      category: "Web · Fitness & Lifestyle",
+      overview:
+        "Online storefront concept for fitness apparel, athletic gear and workout essentials with modern product grids and smooth browsing.",
+      features: [
+        "Categorized workout gear and fitness collections",
+        "Clean product cards with pricing and status indicators",
+        "Responsive grid system optimized for handheld devices",
+        "Fast-loading UI with minimal dependencies",
+      ],
+      stack: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       images: ["images/fitnest.png"],
-      links: { playStore: "", github: "", demo: "" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
     },
     password: {
-      title: "Password generator",
-      category: "Web project",
-      overview: "A password generator web tool.",
-      features: [],
-      stack: [],
+      title: "Password Generator",
+      category: "Web · Security Tool",
+      overview:
+        "Fast, client-side utility for generating strong, cryptographically randomized passwords with customizable security preferences.",
+      features: [
+        "Length slider and symbol toggles (uppercase, lowercase, numbers, symbols)",
+        "Instant strength feedback analysis",
+        "One-click copy to clipboard with toast notification",
+        "Zero server transmission for 100% user privacy",
+      ],
+      stack: ["JavaScript", "Web Crypto API", "CSS3", "HTML5"],
       images: ["images/pasword.png"],
-      links: { playStore: "", github: "", demo: "" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
     },
   };
   const LINKS = [
@@ -247,7 +287,7 @@
   /* Featured TaskMind preview: uses the first screenshot once one is added */
   const pv = $(".preview"),
     first = PROJECTS.taskmind.images[0];
-  if (pv && first) {
+  if (pv && first && !$(".mockup-frame", pv)) {
     const im = document.createElement("img");
     im.src = first;
     im.alt = "TaskMind screenshot";
@@ -356,7 +396,12 @@
         a.href = proj.links[key];
         a.target = "_blank";
         a.rel = "noopener noreferrer";
-        a.append(label + " ", el("span", "arr", "↗"));
+        if (key === "playStore") {
+          a.className = "btn solid store-btn";
+          a.innerHTML = `<svg class="play-icon" viewBox="0 0 512 512" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg> Google Play <span class="arr">↗</span>`;
+        } else {
+          a.append(label + " ", el("span", "arr", "↗"));
+        }
         row.append(a);
       });
       if (row.children.length) body.append(row);
