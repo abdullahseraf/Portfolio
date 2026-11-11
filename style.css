@@ -481,44 +481,51 @@ a:hover > .arr {
 }
 .preview.is-mobile-feat {
   position: relative;
-  min-height: clamp(300px, 46vw, 440px);
-  display: flex;
+  min-height: clamp(340px, 46vw, 460px);
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  padding: 28px 20px;
+  padding: 30px 20px;
   background:
-    radial-gradient(circle at 50% 35%, rgba(56, 189, 248, 0.14), transparent 65%),
+    radial-gradient(circle at 50% 35%, rgba(56, 189, 248, 0.16), transparent 65%),
     radial-gradient(circle at 80% 80%, rgba(30, 41, 59, 0.5), transparent 50%),
     linear-gradient(160deg, #131b24, #0a0d12);
   overflow: hidden;
 }
+.preview.is-mobile-feat::before {
+  display: none !important;
+}
 .preview.is-mobile-feat .mockup-frame {
   position: relative;
   z-index: 2;
-  height: min(350px, 86%);
-  aspect-ratio: 9/19.5;
-  border-radius: 26px;
-  padding: 6px;
+  height: 370px;
+  max-height: 90%;
+  width: 185px;
+  border-radius: 28px;
+  padding: 7px;
   background: linear-gradient(145deg, #334155, #0f172a);
   box-shadow:
-    0 20px 44px -10px rgba(0, 0, 0, 0.85),
+    0 24px 48px -10px rgba(0, 0, 0, 0.85),
     0 0 0 1px rgba(255, 255, 255, 0.12),
-    0 0 35px rgba(56, 189, 248, 0.15);
+    0 0 35px rgba(56, 189, 248, 0.18);
   transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+  display: flex;
 }
 .feat:hover .mockup-frame {
   transform: translateY(-5px) scale(1.02);
   box-shadow:
     0 28px 56px -12px rgba(0, 0, 0, 0.9),
     0 0 0 1px rgba(56, 189, 248, 0.45),
-    0 0 45px rgba(56, 189, 248, 0.25);
+    0 0 45px rgba(56, 189, 248, 0.28);
 }
 .preview.is-mobile-feat .mockup-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  display: block;
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 21px !important;
+  display: block !important;
 }
 .preview {
   position: relative;
@@ -676,9 +683,12 @@ a:hover > .arr {
   position: relative;
   width: 100%;
   height: 195px;
+  min-height: 195px;
+  max-height: 195px;
   overflow: hidden;
   background: #0d1218;
   border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
 }
 .card-thumb img {
   width: 100%;
@@ -698,26 +708,33 @@ a:hover > .arr {
   pointer-events: none;
 }
 .card-thumb.mobile-thumb {
+  height: 195px;
+  min-height: 195px;
+  max-height: 195px;
   background: radial-gradient(circle at 50% 35%, #182434 0%, #080c10 85%);
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   padding: 12px;
+  overflow: hidden;
 }
 .card-thumb.mobile-thumb img {
-  max-height: 100%;
-  width: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  position: relative;
+  height: 170px !important;
+  max-height: 170px !important;
+  width: auto !important;
+  max-width: 95px !important;
+  object-fit: contain !important;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
   transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
 .card:hover .card-thumb.mobile-thumb img {
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(56, 189, 248, 0.4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(56, 189, 248, 0.5);
 }
 .card-thumb.mobile-thumb::after {
-  display: none;
+  display: none !important;
 }
 .thumb-badge {
   position: absolute;
@@ -1239,7 +1256,7 @@ button.shot {
   letter-spacing: 0.5px;
   color: var(--ice);
 }
-.preview img {
+.preview:not(.is-mobile-feat) img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1263,14 +1280,17 @@ button.shot {
   background: radial-gradient(circle at 50% 40%, #151d28 0%, #080c10 85%);
   border: 1px solid var(--line2);
   border-radius: 12px;
-  padding: 12px;
+  padding: 16px;
+  min-height: 280px;
 }
 .stage img {
-  width: 100%;
-  height: 100%;
-  max-height: 460px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 440px;
   object-fit: contain;
   border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 .ph {
   display: grid;
