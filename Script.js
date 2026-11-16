@@ -278,14 +278,19 @@
       title: "Adidas Concept",
       category: "Web · Brand Showcase",
       overview:
-        "Promotional showcase landing page for Adidas athletic footwear featuring vibrant product presentation, bold typography and responsive design.",
+        "Promotional showcase landing page for Adidas athletic footwear featuring vibrant product presentation, bold typography, streetwear collections, and responsive design.",
       features: [
-        "Dynamic brand banner and shoe showcase",
-        "Responsive layout adapted for all screen sizes",
-        "Clean, lightweight and fast-loading CSS architecture",
+        "Step Into The Future dynamic brand hero & product display",
+        "Top Picks in Streetwear interactive featured category",
+        "Fan Favorites responsive footwear card grid with pricing",
+        "Modern high-contrast dark aesthetic with smooth interactions",
       ],
       stack: ["HTML5", "CSS3", "Responsive Design"],
-      images: ["images/adidas.png"],
+      images: [
+        "images/adidas-hero.jpg",
+        "images/adidas-streetwear.png",
+        "images/adidas-favorites.png",
+      ],
       links: { playStore: "", github: "https://github.com/abdullahseraf/Adidas", demo: "https://abdullahseraf.github.io/Adidas/" },
     },
     alziro: {
