@@ -192,7 +192,7 @@
         "Category filtering with smooth CSS transitions",
         "Scroll progress indicator and IntersectionObserver reveal animations",
       ],
-      stack: ["HTML5", "CSS3", "JavaScript", "GitHub Actions"],
+      stack: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
       images: [
         "images/portfolio2.png",
         "images/dark.png",
@@ -200,7 +200,7 @@
         "images/Rectangle 11.png",
         "images/Rectangle 12.png",
       ],
-      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "https://abdullahseraf.github.io" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf/Portfolio", demo: "https://abdullahseraf.github.io/Portfolio/" },
     },
     shoe: {
       title: "Nike Shoe Store",
@@ -215,7 +215,7 @@
       ],
       stack: ["HTML5", "CSS3", "JavaScript", "UI/UX"],
       images: ["images/nike.png", "images/Rectangle 13.png"],
-      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf/Nike-Store", demo: "https://abdullahseraf.github.io/Nike-Store/" },
     },
     weather: {
       title: "Weather Forecast",
@@ -230,7 +230,7 @@
       ],
       stack: ["JavaScript", "REST Weather API", "CSS3", "HTML5"],
       images: ["images/weather.png"],
-      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf/weather-app", demo: "https://abdullahseraf.github.io/weather-app/" },
     },
     arabs: {
       title: "Arab Heritage",
@@ -275,7 +275,35 @@
       ],
       stack: ["JavaScript", "Web Crypto API", "CSS3", "HTML5"],
       images: ["images/pasword.png"],
-      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf/Password-Generator", demo: "https://abdullahseraf.github.io/Password-Generator/" },
+    },
+    adidas: {
+      title: "Adidas Concept",
+      category: "Web · Brand Showcase",
+      overview:
+        "Promotional showcase landing page for Adidas athletic footwear featuring vibrant product presentation, bold typography and responsive design.",
+      features: [
+        "Dynamic brand banner and shoe showcase",
+        "Responsive layout adapted for all screen sizes",
+        "Clean, lightweight and fast-loading CSS architecture",
+      ],
+      stack: ["HTML5", "CSS3", "Responsive Design"],
+      images: ["images/adidas.png"],
+      links: { playStore: "", github: "https://github.com/abdullahseraf/Adidas", demo: "https://abdullahseraf.github.io/Adidas/" },
+    },
+    xo: {
+      title: "Tic-Tac-Toe Game",
+      category: "Web · Interactive Game",
+      overview:
+        "Classic interactive Tic-Tac-Toe (X O) game with turn management, winning cell highlighting and instantaneous match reset.",
+      features: [
+        "Clean interactive board with responsive cells",
+        "Turn indicators and real-time winner detection",
+        "Seamless game reset and replay state",
+      ],
+      stack: ["HTML5", "CSS3", "JavaScript"],
+      images: ["images/portfolio2.png"],
+      links: { playStore: "", github: "https://github.com/abdullahseraf/XO-Game", demo: "https://abdullahseraf.github.io/XO-Game/" },
     },
   };
   const LINKS = [
@@ -399,6 +427,9 @@
         if (key === "playStore") {
           a.className = "btn solid store-btn";
           a.innerHTML = `<svg class="play-icon" viewBox="0 0 512 512" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 59.9zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg> Google Play <span class="arr">↗</span>`;
+        } else if (key === "demo") {
+          a.className = "btn solid";
+          a.append(label + " ", el("span", "arr", "↗"));
         } else {
           a.append(label + " ", el("span", "arr", "↗"));
         }
