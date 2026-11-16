@@ -182,25 +182,23 @@
       },
     },
     portfolio: {
-      title: "Portfolio v2",
-      category: "Web · Previous Portfolio Showcase",
+      title: "Portfolio Showcase",
+      category: "Web · Personal Showcase & Services",
       overview:
-        "The previous responsive developer portfolio design featuring dark theme, smooth animations and interactive project cards.",
+        "Modern responsive developer portfolio featuring a clean, light aesthetic with dedicated sections for web development services, responsive design, and performance optimization.",
       features: [
-        "Fully responsive layout across mobile, tablet and desktop",
-        "Interactive project gallery and detail dialogs",
-        "Category filtering with smooth CSS transitions",
-        "Scroll progress indicator and reveal animations",
+        "Modern clean layout with 3D avatar profile and service cards",
+        "Fully responsive architecture across mobile and desktop",
+        "Clear service breakdowns for Web Development & Performance",
+        "Interactive navigation and smooth sectional transitions",
       ],
-      stack: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
+      stack: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       images: [
-        "images/portfolio2.png",
+        "images/portfolio-showcase.jpg",
         "images/dark.png",
         "images/light.png",
-        "images/Rectangle 11.png",
-        "images/Rectangle 12.png",
       ],
-      links: { playStore: "", github: "https://github.com/abdullahseraf/Portfolio-v2", demo: "https://abdullahseraf.github.io/Portfolio-v2/" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf/Portfolio-v1", demo: "https://abdullahseraf.github.io/Portfolio-v1/" },
     },
     shoe: {
       title: "Nike Shoe Store",
@@ -288,6 +286,25 @@
       stack: ["HTML5", "CSS3", "Responsive Design"],
       images: ["images/adidas.png"],
       links: { playStore: "", github: "https://github.com/abdullahseraf/Adidas", demo: "https://abdullahseraf.github.io/Adidas/" },
+    },
+    alziro: {
+      title: "JS Learning Platform",
+      category: "Web · Educational & Quiz Platform",
+      overview:
+        "منصة تعليمية تفاعلية متكاملة لتعلم وإتقان لغة جافاسكربت مبنية استناداً إلى دورة Elzero Web School، تتضمن فهرساً للدروس، شروحات برمجية، اختبارات تفاعلية فورية ومشاريع تطبيقية عملية.",
+      features: [
+        "Interactive Lessons dynamic sidebar and content viewer",
+        "Real-time Quiz engine with instant evaluation and feedback",
+        "Practical coding challenges and project implementation",
+        "RTL Arabic reading-optimized typography and layout",
+      ],
+      stack: ["JavaScript", "HTML5", "CSS3", "Interactive Quiz UI"],
+      images: ["images/javascript-platform.svg"],
+      links: {
+        playStore: "",
+        github: "https://github.com/abdullahseraf/alziro-js",
+        demo: "https://abdullahseraf.github.io/alziro-js/",
+      },
     },
   };
   const LINKS = [

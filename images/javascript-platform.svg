@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 390" width="600" height="390">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e131f"/>
+      <stop offset="50%" stop-color="#151c2d"/>
+      <stop offset="100%" stop-color="#0a0d14"/>
+    </linearGradient>
+    <linearGradient id="jsGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7df1e"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#f7df1e" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f7df1e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="390" fill="url(#bg)"/>
+  <rect width="600" height="390" fill="url(#halo)"/>
+
+  <!-- Code editor mockup card -->
+  <g transform="translate(60, 45)">
+    <!-- Window Frame -->
+    <rect width="480" height="295" rx="14" fill="#0b0f19" stroke="#26334d" stroke-width="1.5"/>
+    <!-- Window Header -->
+    <rect width="480" height="38" rx="14" fill="#121826"/>
+    <path d="M0,26 L480,26" stroke="#1f293d" stroke-width="1"/>
+    <!-- Window Buttons -->
+    <circle cx="22" cy="19" r="5" fill="#ef4444"/>
+    <circle cx="38" cy="19" r="5" fill="#f59e0b"/>
+    <circle cx="54" cy="19" r="5" fill="#10b981"/>
+    <text x="240" y="24" fill="#94a3b8" font-family="'Manrope', -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">JavaScript Learning Platform · Elzero Web School</text>
+
+    <!-- JS Badge Logo -->
+    <g transform="translate(40, 65)">
+      <rect width="68" height="68" rx="12" fill="url(#jsGlow)"/>
+      <text x="52" y="56" fill="#000" font-family="'Manrope', sans-serif" font-weight="900" font-size="40" text-anchor="end">JS</text>
+    </g>
+
+    <!-- Code & Content lines -->
+    <g transform="translate(130, 75)">
+      <text x="0" y="18" fill="#f8fafc" font-family="'Manrope', sans-serif" font-size="20" font-weight="800">منصة تعلّم واختبارات جافاسكربت</text>
+      <text x="0" y="42" fill="#94a3b8" font-family="'Manrope', sans-serif" font-size="13" font-weight="500">Interactive Lessons · Real-Time Quizzes · Practical Projects</text>
+    </g>
+
+    <!-- Code Block Area -->
+    <g transform="translate(35, 155)">
+      <rect width="410" height="110" rx="10" fill="#050811" stroke="#1e293b" stroke-width="1"/>
+      <text x="20" y="32" font-family="'Fira Code', 'Courier New', monospace" font-size="13" fill="#60a5fa">const <tspan fill="#f7df1e">learningPath</tspan> = <tspan fill="#e2e8f0">{</tspan></text>
+      <text x="40" y="54" font-family="'Fira Code', 'Courier New', monospace" font-size="13" fill="#94a3b8">lessons: <tspan fill="#34d399">"JavaScript Fundamentals"</tspan>,</text>
+      <text x="40" y="74" font-family="'Fira Code', 'Courier New', monospace" font-size="13" fill="#94a3b8">quizzes: <tspan fill="#38bdf8">true</tspan>, practice: <tspan fill="#f59e0b">"Real-world Tasks"</tspan></text>
+      <text x="20" y="96" font-family="'Fira Code', 'Courier New', monospace" font-size="13" fill="#e2e8f0">};</text>
+    </g>
+  </g>
+</svg>
