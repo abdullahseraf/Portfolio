@@ -305,7 +305,7 @@
         "RTL Arabic reading-optimized typography and layout",
       ],
       stack: ["JavaScript", "HTML5", "CSS3", "Interactive Quiz UI"],
-      images: ["images/javascript-platform.svg"],
+      images: ["images/alziro-3.png", "images/alziro-2.jpg", "images/alziro-1.jpg"],
       links: {
         playStore: "",
         github: "https://github.com/abdullahseraf/alziro-js",
