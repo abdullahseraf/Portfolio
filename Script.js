@@ -182,15 +182,15 @@
       },
     },
     portfolio: {
-      title: "Portfolio Website",
-      category: "Web · Personal Showcase",
+      title: "Portfolio v2",
+      category: "Web · Previous Portfolio Showcase",
       overview:
-        "Personal developer portfolio built with modern responsive CSS, semantic HTML5, interactive JavaScript and CI/CD automated deployment with GitHub Pages.",
+        "The previous responsive developer portfolio design featuring dark theme, smooth animations and interactive project cards.",
       features: [
         "Fully responsive layout across mobile, tablet and desktop",
         "Interactive project gallery and detail dialogs",
         "Category filtering with smooth CSS transitions",
-        "Scroll progress indicator and IntersectionObserver reveal animations",
+        "Scroll progress indicator and reveal animations",
       ],
       stack: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
       images: [
@@ -200,7 +200,7 @@
         "images/Rectangle 11.png",
         "images/Rectangle 12.png",
       ],
-      links: { playStore: "", github: "https://github.com/abdullahseraf/Portfolio", demo: "https://abdullahseraf.github.io/Portfolio/" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf/Portfolio-v2", demo: "https://abdullahseraf.github.io/Portfolio-v2/" },
     },
     shoe: {
       title: "Nike Shoe Store",
@@ -234,33 +234,31 @@
     },
     arabs: {
       title: "Arab Heritage",
-      category: "Web · Cultural Portal",
+      category: "Design · Figma UI/UX Concept",
       overview:
-        "An educational and cultural web platform exploring the rich history, literature, architecture and civilization of the Arab world.",
+        "نموذج أولي وتصميم واجهة مستخدم وتجربة مستخدم (UI/UX Concept) تم إعداده على أداة Figma كنموذج استعراضي بدون كود حالياً.",
       features: [
-        "Structured historical eras and cultural spotlights",
-        "Bilingual typography and high-definition visual assets",
-        "Smooth scroll navigation and reading-optimized typography",
-        "Interactive cultural timeline cards",
+        "Figma Modern Layout & Visual Architecture",
+        "Cultural & Historical Portal UI Mockup",
+        "Design System & Typography Hierarchy",
       ],
-      stack: ["HTML5", "CSS3", "JavaScript"],
+      stack: ["Figma", "UI/UX Design", "Wireframing"],
       images: ["images/arab.png", "images/arab2.png"],
-      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
+      links: { playStore: "", github: "", demo: "" },
     },
     shop: {
       title: "FitNest Store",
-      category: "Web · Fitness & Lifestyle",
+      category: "Design · Figma UI/UX Concept",
       overview:
-        "Online storefront concept for fitness apparel, athletic gear and workout essentials with modern product grids and smooth browsing.",
+        "تصميم واجهة متجر رياضي وتجربة مستخدم متكاملة (UI/UX) تم تصميمه كنموذج أولي على أداة Figma.",
       features: [
-        "Categorized workout gear and fitness collections",
-        "Clean product cards with pricing and status indicators",
-        "Responsive grid system optimized for handheld devices",
-        "Fast-loading UI with minimal dependencies",
+        "Fitness E-Commerce Product Layout",
+        "Interactive Prototype Wireframing",
+        "Modern High-Contrast Dark Aesthetic",
       ],
-      stack: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      stack: ["Figma", "UI/UX Design", "E-Commerce"],
       images: ["images/fitnest.png"],
-      links: { playStore: "", github: "https://github.com/abdullahseraf", demo: "" },
+      links: { playStore: "", github: "", demo: "" },
     },
     password: {
       title: "Password Generator",
@@ -290,20 +288,6 @@
       stack: ["HTML5", "CSS3", "Responsive Design"],
       images: ["images/adidas.png"],
       links: { playStore: "", github: "https://github.com/abdullahseraf/Adidas", demo: "https://abdullahseraf.github.io/Adidas/" },
-    },
-    xo: {
-      title: "Tic-Tac-Toe Game",
-      category: "Web · Interactive Game",
-      overview:
-        "Classic interactive Tic-Tac-Toe (X O) game with turn management, winning cell highlighting and instantaneous match reset.",
-      features: [
-        "Clean interactive board with responsive cells",
-        "Turn indicators and real-time winner detection",
-        "Seamless game reset and replay state",
-      ],
-      stack: ["HTML5", "CSS3", "JavaScript"],
-      images: ["images/portfolio2.png"],
-      links: { playStore: "", github: "https://github.com/abdullahseraf/XO-Game", demo: "https://abdullahseraf.github.io/XO-Game/" },
     },
   };
   const LINKS = [
