@@ -231,17 +231,18 @@
       links: { playStore: "", github: "https://github.com/abdullahseraf/weather-app", demo: "https://abdullahseraf.github.io/weather-app/" },
     },
     arabs: {
-      title: "Arab Heritage",
+      title: "نبض الحروف (Arabic Poetry)",
       category: "Design · Figma UI/UX Concept",
       overview:
-        "نموذج أولي وتصميم واجهة مستخدم وتجربة مستخدم (UI/UX Concept) تم إعداده على أداة Figma كنموذج استعراضي بدون كود حالياً.",
+        "تصميم واجهة مستخدم وتجربة رقمية مخصصة للأدب والشعر العربي القديم والحديث، تتضمن بطاقات للشعراء (محمود درويش، المتنبي، عنترة، قيس بن الملوح) مع استعراض لأجمل الأبيات بتصميم كلاسيكي وزخارف راقية معدة على Figma.",
       features: [
-        "Figma Modern Layout & Visual Architecture",
-        "Cultural & Historical Portal UI Mockup",
-        "Design System & Typography Hierarchy",
+        "Arabic Calligraphy & Poetry Portal UI Mockup",
+        "Poet Profile & Verses Interactive Card Showcase",
+        "Elegant Floral & Classic Islamic Geometry Details",
+        "RTL Typographic System & Warm Color Palette",
       ],
-      stack: ["Figma", "UI/UX Design", "Wireframing"],
-      images: ["images/arab.png", "images/arab2.png"],
+      stack: ["Figma", "UI/UX Design", "Arabic Typography"],
+      images: ["images/nabdh-1.jpg", "images/nabdh-2.jpg", "images/arab.png", "images/arab2.png"],
       links: { playStore: "", github: "", demo: "" },
     },
     shop: {
