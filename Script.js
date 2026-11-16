@@ -198,7 +198,7 @@
         "images/dark.png",
         "images/light.png",
       ],
-      links: { playStore: "", github: "https://github.com/abdullahseraf/Portfolio-v1", demo: "https://abdullahseraf.github.io/Portfolio-v1/" },
+      links: { playStore: "", github: "https://github.com/abdullahseraf/Portfolio-v2", demo: "https://abdullahseraf.github.io/Portfolio-v2/" },
     },
     shoe: {
       title: "Nike Shoe Store",
